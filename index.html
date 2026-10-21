@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TaskBuddy Privacy Policy — MRehan</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0b0f19; color: #e8ebf2; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.65; }
+  main { max-width: 820px; margin: 0 auto; padding: 48px 22px 64px; }
+  .brand { letter-spacing: .18em; font-size: 12px; font-weight: 700; color: #7aa8ff; text-transform: uppercase; }
+  h1 { font-size: 40px; margin: 6px 0 4px; line-height: 1.15; }
+  .sub { color: #9aa7bd; margin: 0 0 28px; }
+  h2 { font-size: 21px; margin: 36px 0 10px; }
+  p, li { color: #c3cbdb; font-size: 16px; }
+  b, th { color: #eef1f7; }
+  a { color: #6ea8ff; }
+  code { background: #1a2132; padding: 1px 6px; border-radius: 5px; font-size: 13.5px; color: #d7deeb; }
+  .card { background: #131a29; border: 1px solid #232f47; border-radius: 14px; padding: 18px 20px; }
+  .card p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 6px; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 12px; border: 1px solid #232f47; vertical-align: top; color: #c3cbdb; }
+  th { background: #131a29; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid #232f47; color: #7e8aa3; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <span class="brand">MRehan</span>
+  <h1>Privacy Policy</h1>
+  <p class="sub">TaskBuddy for Chrome · version 1.0.0 · effective 22 October 2026</p>
+
+  <div class="card"><p><b>In short:</b> TaskBuddy keeps your tasks and settings in your browser's extension storage on this device. MRehan does not run a server for TaskBuddy and does not receive, sell or share your data. There is no account, no analytics, no advertising and no tracking. The only time anything leaves your device because of TaskBuddy is because of <i>live search suggestions</i> (see below) or use the web search box.</p></div>
+
+  <h2>1. What TaskBuddy stores, and where</h2>
+  <p>Everything below is saved with Chrome's <code>chrome.storage.local</code> API, on your computer, inside your Chrome profile. It is not synced through your Google account.</p>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Tasks: title, notes (rich text), deadline, priority, category, tags, colour, pin, assigned character, reminder choices, snooze, created/completed times</td><td>The core task manager.</td></tr>
+    <tr><td>Settings: design, wallpaper, character, reminder, quiet-hours, motion and widget preferences, and the optional name you enter for greetings</td><td>Remembering your choices.</td></tr>
+    <tr><td>Layouts from Customize, including any background image you upload</td><td>Restoring your customized workspace. Uploaded images are resized and stored locally.</td></tr>
+    <tr><td>Activity history (last 400 events such as "created", "completed", "rescheduled", with task title and time)</td><td>The History view in the task manager.</td></tr>
+    <tr><td>Reminder bookkeeping (which reminders already fired) and dismissed billboards</td><td>Making sure each reminder is shown only once.</td></tr>
+  </table>
+  <p>Some small per-page preferences may also be kept by the browser for the extension's own pages. TaskBuddy does not use cookies.</p>
+
+  <h2>2. Permissions and what they are used for</h2>
+  <table>
+    <tr><th>Permission</th><th>Use</th></tr>
+    <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Saving the data above locally (unlimited so large task lists and background images fit).</td></tr>
+    <tr><td><code>alarms</code>, <code>notifications</code></td><td>Checking deadlines and showing reminder notifications, including when no TaskBuddy tab is open.</td></tr>
+    <tr><td>New tab override</td><td>Showing TaskBuddy on new tabs. You can switch back to Chrome's new tab in Settings or the popup.</td></tr>
+    <tr><td><i>Optional</i> <code>bookmarks</code>, <code>favicon</code></td><td>Requested only if you turn on the bookmarks strip. Bookmarks are read locally to display them and are never transmitted.</td></tr>
+    <tr><td><i>Optional</i> access to <code>suggestqueries.google.com</code></td><td>Requested on first use of the search box, for live suggestions.</td></tr>
+  </table>
+
+  <h2>3. Network requests</h2>
+  <ul>
+    <li><b>No remote code.</b> All scripts, fonts, images and character art ship inside the extension. TaskBuddy works offline.</li>
+    <li><b>Web search box.</b> When you submit a search, your browser navigates to Google Search (or to the address you typed), exactly as if you had typed it in the address bar. Google's privacy policy applies to that search.</li>
+    <li><b>Live search suggestions (always on).</b> The text you type into TaskBuddy's search box is sent to Google's suggestion service (<code>suggestqueries.google.com</code>) to show suggestions, without cookies. Google's privacy policy applies. If permission is not granted, suggestions are skipped and search still works.</li>
+    <li>TaskBuddy never reads the web pages you visit and never collects your browsing history.</li>
+  </ul>
+
+  <h2>4. Characters and "smart" behaviour</h2>
+  <p>Character moods, dialogue and reminders are produced by local rules and a built-in list of lines. TaskBuddy does not use any AI model or external language service, and your tasks are never sent anywhere to generate text.</p>
+
+  <h2>5. Your control</h2>
+  <ul>
+    <li><b>Export</b> a JSON backup any time (Settings → Privacy &amp; data). The file is saved to your computer only.</li>
+    <li><b>Delete</b> all TaskBuddy data from Settings → Privacy &amp; data → Delete all data.</li>
+    <li><b>Uninstalling</b> TaskBuddy removes its stored data from Chrome.</li>
+    <li>Optional permissions can be removed at <code>chrome://extensions</code> → TaskBuddy → Details.</li>
+  </ul>
+
+  <h2>6. Children</h2>
+  <p>TaskBuddy does not knowingly collect personal information from anyone, including children, because it does not collect data at all.</p>
+
+  <h2>7. Changes and contact</h2>
+  <p>If TaskBuddy's data practices change, this policy will be updated and the new version shipped with the extension. Questions: <a href="mailto:therehanco@gmail.com">therehanco@gmail.com</a>.</p>
+
+  <div class="foot">© MRehan · TaskBuddy Privacy Policy</div>
+</main>
+</body>
+</html>
