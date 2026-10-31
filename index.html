@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TaskBuddy Privacy Policy — MRehan</title>
+<title>TaskBuddyLab Privacy Policy — MR ToolLab</title>
+<meta name="description" content="Privacy policy for the TaskBuddyLab Chrome extension by MR ToolLab: what is stored, where, Chrome Sync, permissions and your control.">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -25,64 +26,80 @@
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
   .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid #232f47; color: #7e8aa3; font-size: 14px; }
+  @media (max-width: 600px) { h1 { font-size: 32px; } table { font-size: 14px; } th, td { padding: 8px; } }
 </style>
 </head>
 <body>
 <main>
-  <span class="brand">MRehan</span>
+  <span class="brand">MR ToolLab</span>
   <h1>Privacy Policy</h1>
-  <p class="sub">TaskBuddy for Chrome · version 1.0.0 · effective 22 October 2026</p>
+  <p class="sub">TaskBuddyLab for Chrome · version 1.1.0 · effective 31 October 2026</p>
 
-  <div class="card"><p><b>In short:</b> TaskBuddy keeps your tasks and settings in your browser's extension storage on this device. MRehan does not run a server for TaskBuddy and does not receive, sell or share your data. There is no account, no analytics, no advertising and no tracking. The only time anything leaves your device because of TaskBuddy is because of <i>live search suggestions</i> (see below) or use the web search box.</p></div>
+  <div class="card"><p><b>In short:</b> TaskBuddyLab keeps your tasks and settings in your browser's extension storage on your device, plus a private copy in <i>your own</i> Google account through Chrome Sync so they appear on all your Chrome devices (you can turn this off). MR ToolLab does not run a server for TaskBuddyLab and does not receive, sell or share your data. There is no account, no analytics, no advertising and no tracking. Apart from Chrome Sync, the only time anything leaves your device because of TaskBuddyLab is when you use the search box (see section 4).</p></div>
 
-  <h2>1. What TaskBuddy stores, and where</h2>
-  <p>Everything below is saved with Chrome's <code>chrome.storage.local</code> API, on your computer, inside your Chrome profile. It is not synced through your Google account.</p>
+  <h2>1. What TaskBuddyLab stores, and where</h2>
+  <p>Everything below is saved with Chrome's <code>chrome.storage.local</code> API, on your computer, inside your Chrome profile.</p>
   <table>
     <tr><th>Data</th><th>Why</th></tr>
-    <tr><td>Tasks: title, notes (rich text), deadline, priority, category, tags, colour, pin, assigned character, reminder choices, snooze, created/completed times</td><td>The core task manager.</td></tr>
-    <tr><td>Settings: design, wallpaper, character, reminder, quiet-hours, motion and widget preferences, and the optional name you enter for greetings</td><td>Remembering your choices.</td></tr>
+    <tr><td>Tasks: title, notes (rich text), deadline, priority, category, tags, colour, pin, assigned character, reminder choices, snooze, created/updated/completed times</td><td>The core task manager.</td></tr>
+    <tr><td>Settings: design, wallpaper, theme colour, character, reminder, quiet-hours, motion and widget preferences, shortcuts, and the optional name you enter for greetings</td><td>Remembering your choices.</td></tr>
     <tr><td>Layouts from Customize, including any background image you upload</td><td>Restoring your customized workspace. Uploaded images are resized and stored locally.</td></tr>
     <tr><td>Activity history (last 400 events such as "created", "completed", "rescheduled", with task title and time)</td><td>The History view in the task manager.</td></tr>
-    <tr><td>Reminder bookkeeping (which reminders already fired) and dismissed billboards</td><td>Making sure each reminder is shown only once.</td></tr>
+    <tr><td>Reminder bookkeeping (which reminders already fired) and dismissed deadline signs</td><td>Making sure each reminder is shown only once.</td></tr>
+    <tr><td>Automatic backups: copies of your tasks, settings and layouts (daily, before every update, and before imports, restores and "Delete all data")</td><td>So your data can be recovered if anything goes wrong. Restorable in Settings → Sync &amp; backup.</td></tr>
+    <tr><td>Sync bookkeeping: IDs and times of deleted tasks, and when settings last changed</td><td>So edits and deletions reach your other devices correctly.</td></tr>
   </table>
-  <p>Some small per-page preferences may also be kept by the browser for the extension's own pages. TaskBuddy does not use cookies.</p>
+  <p>Some small per-page preferences may also be kept by the browser for the extension's own pages. TaskBuddyLab does not use cookies.</p>
 
-  <h2>2. Permissions and what they are used for</h2>
+  <h2>2. Chrome Sync</h2>
+  <p>Your tasks, settings and layouts are also copied with Chrome's <code>chrome.storage.sync</code> API. If you are signed in to Chrome and Chrome sync (including <i>Extensions</i>) is on, Google stores this copy as part of your Chrome sync data so that:</p>
+  <ul>
+    <li>the same tasks and settings appear on every Chrome signed in to your Google account, and changes on one device reach the others;</li>
+    <li>your data comes back if you remove your Chrome profile or move to a new computer.</li>
+  </ul>
+  <p>This copy lives in your own Google account under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. MR ToolLab cannot access it. Activity history, reminder bookkeeping, automatic backups and images you upload are <b>not</b> synced. You can turn sync off in TaskBuddyLab → Settings → Sync &amp; backup, or in Chrome's own sync settings.</p>
+
+  <h2>3. Permissions and what they are used for</h2>
   <table>
     <tr><th>Permission</th><th>Use</th></tr>
-    <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Saving the data above locally (unlimited so large task lists and background images fit).</td></tr>
-    <tr><td><code>alarms</code>, <code>notifications</code></td><td>Checking deadlines and showing reminder notifications, including when no TaskBuddy tab is open.</td></tr>
-    <tr><td>New tab override</td><td>Showing TaskBuddy on new tabs. You can switch back to Chrome's new tab in Settings or the popup.</td></tr>
-    <tr><td><i>Optional</i> <code>bookmarks</code>, <code>favicon</code></td><td>Requested only if you turn on the bookmarks strip. Bookmarks are read locally to display them and are never transmitted.</td></tr>
+    <tr><td><code>storage</code>, <code>unlimitedStorage</code></td><td>Saving the data in section 1 locally (unlimited so large task lists, backups and background images fit), and the Chrome Sync copy in section 2.</td></tr>
+    <tr><td><code>alarms</code>, <code>notifications</code></td><td>Checking deadlines and showing reminder notifications, including when no TaskBuddyLab tab is open.</td></tr>
+    <tr><td><code>bookmarks</code>, <code>favicon</code></td><td>Showing and managing your bookmarks bar with site icons. Bookmarks are read locally and never transmitted.</td></tr>
+    <tr><td><code>tabGroups</code></td><td>"Open in new tab group" from the bookmarks right-click menu, only when you choose it.</td></tr>
+    <tr><td>New tab override</td><td>Showing TaskBuddyLab on new tabs. You can switch back to Chrome's new tab in Settings or the popup.</td></tr>
+    <tr><td><i>Optional</i> <code>topSites</code></td><td>Requested only if you choose "Most visited" shortcut tiles. Read locally, never transmitted.</td></tr>
     <tr><td><i>Optional</i> access to <code>suggestqueries.google.com</code></td><td>Requested on first use of the search box, for live suggestions.</td></tr>
   </table>
 
-  <h2>3. Network requests</h2>
+  <h2>4. Network requests</h2>
   <ul>
-    <li><b>No remote code.</b> All scripts, fonts, images and character art ship inside the extension. TaskBuddy works offline.</li>
+    <li><b>No remote code.</b> All scripts, fonts, images and character art ship inside the extension. TaskBuddyLab works offline.</li>
     <li><b>Web search box.</b> When you submit a search, your browser navigates to Google Search (or to the address you typed), exactly as if you had typed it in the address bar. Google's privacy policy applies to that search.</li>
-    <li><b>Live search suggestions (always on).</b> The text you type into TaskBuddy's search box is sent to Google's suggestion service (<code>suggestqueries.google.com</code>) to show suggestions, without cookies. Google's privacy policy applies. If permission is not granted, suggestions are skipped and search still works.</li>
-    <li>TaskBuddy never reads the web pages you visit and never collects your browsing history.</li>
+    <li><b>Live search suggestions.</b> The text you type into TaskBuddyLab's search box is sent to Google's suggestion service (<code>suggestqueries.google.com</code>) to show suggestions, without cookies. Google's privacy policy applies. If permission is not granted, suggestions are skipped and search still works. TaskBuddyLab never saves your searches.</li>
+    <li><b>Chrome Sync</b> is handled by Chrome itself, between your browser and your Google account (section 2).</li>
+    <li>TaskBuddyLab never reads the web pages you visit and never collects your browsing history.</li>
   </ul>
 
-  <h2>4. Characters and "smart" behaviour</h2>
-  <p>Character moods, dialogue and reminders are produced by local rules and a built-in list of lines. TaskBuddy does not use any AI model or external language service, and your tasks are never sent anywhere to generate text.</p>
+  <h2>5. Characters and "smart" behaviour</h2>
+  <p>Character moods, dialogue and reminders are produced by local rules and a built-in list of lines. TaskBuddyLab does not use any AI model or external language service, and your tasks are never sent anywhere to generate text.</p>
 
-  <h2>5. Your control</h2>
+  <h2>6. Your control</h2>
   <ul>
-    <li><b>Export</b> a JSON backup any time (Settings → Privacy &amp; data). The file is saved to your computer only.</li>
-    <li><b>Delete</b> all TaskBuddy data from Settings → Privacy &amp; data → Delete all data.</li>
-    <li><b>Uninstalling</b> TaskBuddy removes its stored data from Chrome.</li>
-    <li>Optional permissions can be removed at <code>chrome://extensions</code> → TaskBuddy → Details.</li>
+    <li><b>Export</b> a JSON backup any time (Settings → Sync &amp; backup or Privacy &amp; data). The file is saved to your computer only.</li>
+    <li><b>Restore</b> any automatic backup from Settings → Sync &amp; backup.</li>
+    <li><b>Turn off Chrome Sync</b> for TaskBuddyLab in Settings → Sync &amp; backup.</li>
+    <li><b>Delete</b> all TaskBuddyLab data from Settings → Privacy &amp; data → Delete all data. With sync on, this also deletes it on your other synced devices. Automatic backups can be deleted separately in Settings → Sync &amp; backup.</li>
+    <li><b>Uninstalling</b> TaskBuddyLab removes its local data from Chrome. The Chrome Sync copy stays in your Google account (so reinstalling brings it back) until you delete your data in TaskBuddyLab or clear your Chrome sync data in your Google Account.</li>
+    <li>Optional permissions can be removed at <code>chrome://extensions</code> → TaskBuddyLab → Details.</li>
   </ul>
 
-  <h2>6. Children</h2>
-  <p>TaskBuddy does not knowingly collect personal information from anyone, including children, because it does not collect data at all.</p>
+  <h2>7. Children</h2>
+  <p>TaskBuddyLab does not knowingly collect personal information from anyone, including children. MR ToolLab does not collect any data at all.</p>
 
-  <h2>7. Changes and contact</h2>
-  <p>If TaskBuddy's data practices change, this policy will be updated and the new version shipped with the extension. Questions: <a href="mailto:therehanco@gmail.com">therehanco@gmail.com</a>.</p>
+  <h2>8. Changes and contact</h2>
+  <p>If TaskBuddyLab's data practices change, this policy will be updated here and in the extension, with a new effective date. Questions: <a href="mailto:therehanco@gmail.com">therehanco@gmail.com</a>.</p>
 
-  <div class="foot">© MRehan · TaskBuddy Privacy Policy</div>
+  <div class="foot">© MR ToolLab · TaskBuddyLab Privacy Policy</div>
 </main>
 </body>
 </html>
